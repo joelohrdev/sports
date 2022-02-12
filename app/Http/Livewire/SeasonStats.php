@@ -12,11 +12,20 @@ class SeasonStats extends Component
     public $totalGames;
     public $totalGamesPlayed;
     public $totalUpcomingGames;
-    public $tourgames;
+    public $tourGames;
+    public $totalTourGames;
 
     public function mount()
     {
-        $this->totalGames = Game::count();
+        $this->tourGames = Tournament::pluck('games')->toArray();
+        foreach($this->tourGames as $game) {
+            foreach ($game as $value) {
+                $singleArray[] = $value;
+            }
+        }
+        $this->totalTourGames = count($singleArray);
+
+        $this->totalGames = Game::count() + $this->totalTourGames;
         $this->totalGamesPlayed = Game::where('date', '<', Carbon::now())->count();
         $this->totalUpcomingGames = Game::where('date', '>=', Carbon::now())->count();
     }
