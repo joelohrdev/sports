@@ -16,11 +16,11 @@
 {{--        <x-header/>--}}
         <div class="max-w-7xl mx-auto py-8 px-4 sm:py-8 sm:px-6 lg:px-8">
             <livewire:season-stats />
-            <div class="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-4">
-                <div class="col-span-2 lg:col-start-1 lg:col-span-2">
+            <div class="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-5">
+                <div class="col-span-1 lg:col-start-1 lg:col-span-3">
                     <livewire:game-list />
                 </div>
-                <div class="space-y-6 lg:col-start-3 col-span-2">
+                <div class="space-y-6 lg:col-start-4 col-span-1 lg:col-span-2">
                     <livewire:tournament-list/>
                 </div>
             </div>
