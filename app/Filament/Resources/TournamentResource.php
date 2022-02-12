@@ -57,7 +57,8 @@ class TournamentResource extends Resource
                                         Forms\Components\Select::make('outcome')
                                             ->options([
                                                 'win' => 'Win',
-                                                'lose' => 'Lose'
+                                                'lose' => 'Lose',
+                                                'tie' => 'Tie'
                                             ])
                                     ])
                                     ->columns(2)

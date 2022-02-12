@@ -38,7 +38,8 @@ class GameResource extends Resource
                 Forms\Components\Radio::make('outcome')
                     ->options([
                         'win' => 'Win',
-                        'lose' => 'Lose'
+                        'lose' => 'Lose',
+                        'tie' => 'Tie'
                     ])->inline(),
                 Forms\Components\TextInput::make('team_score'),
                 Forms\Components\TextInput::make('opponent_score'),
