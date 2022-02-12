@@ -2,6 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="Sports stats for the kids">
+        <meta name="keywords" content="Baseball, Vollyball, Softball">
+        <meta name="author" content="Joe Lohr">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Sports Schedule</title>
