@@ -6,15 +6,9 @@
                     <div class="hidden md:block">
                         <div class="flex items-baseline space-x-4">
                             <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
-                            <a href="#" class="bg-sky-700 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+                            <a href="/" class="{{ Request::is('/') ? 'bg-sky-700' : 'hover:bg-sky-500 hover:bg-opacity-75' }} text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
 
-                            <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Team</a>
-
-                            <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-
-                            <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
-
-                            <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+                            <a href="/game-archive" class="{{ Request::is('game-archive') ? 'bg-sky-700' : 'hover:bg-sky-500 hover:bg-opacity-75' }} text-white hover:bg-sky-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Game Archive</a>
                         </div>
                     </div>
                 </div>
