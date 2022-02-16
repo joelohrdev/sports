@@ -24,8 +24,8 @@ class GameResource extends Resource
         return $form
             ->schema([
                 Forms\Components\BelongsToSelect::make('team_id')->relationship('team', 'name'),
-                Forms\Components\DatePicker::make('date'),
-                Forms\Components\TimePicker::make('time'),
+                Forms\Components\DatePicker::make('date')->format('F d, Y')->weekStartsOnSunday(),
+                Forms\Components\TimePicker::make('time')->withoutSeconds(),
                 Forms\Components\Radio::make('field')
                     ->options([
                         'tbd' => 'TBD',
@@ -50,10 +50,11 @@ class GameResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('team.name'),
-                Tables\Columns\TextColumn::make('date'),
+                Tables\Columns\TextColumn::make('team.name')->sortable(),
+                Tables\Columns\TextColumn::make('date')->DateTime('F d, Y')->sortable(),
                 Tables\Columns\TextColumn::make('opponent'),
             ])
+            ->defaultSort('date')
             ->filters([
                 //
             ]);
