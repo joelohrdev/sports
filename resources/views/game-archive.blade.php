@@ -2,6 +2,6 @@
 
 @section('content')
     <div>
-
+        <livewire:past-game-list />
     </div>
 @endsection
