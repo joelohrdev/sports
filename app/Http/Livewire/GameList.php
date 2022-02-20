@@ -14,7 +14,10 @@ class GameList extends Component
     public function render()
     {
         return view('livewire.game-list', [
-            'games' => Game::where('date', '>=', Carbon::today())->orderBy('date', 'ASC')->orderBy('time', 'ASC')->paginate(10)
+            'games' => Game::where('date', '>=', Carbon::today())
+                ->orderBy('date', 'ASC')
+                ->orderBy('time', 'ASC')
+                ->paginate(10)
         ]);
     }
 }

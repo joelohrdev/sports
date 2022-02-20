@@ -34,6 +34,8 @@ class TournamentResource extends Resource
                                 Forms\Components\TextInput::make('city'),
                                 Forms\Components\TextInput::make('state'),
                                 Forms\Components\TextInput::make('zip_code'),
+                                Forms\Components\DatePicker::make('start_date')->format('F d, Y')->weekStartsOnSunday(),
+                                Forms\Components\DatePicker::make('end_date')->format('F d, Y')->weekStartsOnSunday(),
                                 Forms\Components\TextInput::make('outcome'),
                                 Forms\Components\MarkdownEditor::make('notes')
                             ])

@@ -13,7 +13,7 @@
     @livewireStyles
 </head>
 <body class="antialiased bg-gray-100">
-{{--<x-header/>--}}
+<x-header/>
 <div class="max-w-7xl mx-auto py-8 px-4 sm:py-8 sm:px-6 lg:px-8">
     @yield('content')
 </div>
