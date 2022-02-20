@@ -15,7 +15,7 @@ class PastGameList extends Component
         return view('livewire.past-game-list', [
             'games' => Game::where('date', '<', Carbon::today())
                 ->orderBy('date', 'DESC')
-                ->orderBy('time', 'DESC')
+                ->orderBy('time', 'ASC')
                 ->paginate(10)
         ]);
     }
