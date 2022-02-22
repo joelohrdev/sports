@@ -10,7 +10,7 @@
                     <li class="py-4 flex justify-between items-center">
                         <div>
                             <p class="text-sm font-medium text-gray-900">{{ Carbon\Carbon::parse($game['date'])->format('M d, Y') }} - {{ Carbon\Carbon::parse($game['time'])->format('h:i A ') }}</p>
-                            <p class="text-sm text-gray-500">vs. {{ $game['opponent'] }}</p>
+                            <p class="text-sm text-gray-500">vs. {{ $game['opponent'] }} | {{ $game['team_score'] }} - {{ $game['opponent_score'] }}</p>
                         </div>
                         <div>
                             @if($game['outcome'] == 'win')
