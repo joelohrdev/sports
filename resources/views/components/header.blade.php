@@ -7,8 +7,8 @@
                         <div class="flex items-baseline space-x-4">
                             <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
                             <a href="/" class="{{ Request::is('/') ? 'bg-sky-700' : 'hover:bg-sky-500 hover:bg-opacity-75' }} text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
-
                             <a href="/game-archive" class="{{ Request::is('game-archive') ? 'bg-sky-700' : 'hover:bg-sky-500 hover:bg-opacity-75' }} text-white hover:bg-sky-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Game Archive</a>
+                            <a href="/tournament-archive" class="{{ Request::is('tournament-archive') ? 'bg-sky-700' : 'hover:bg-sky-500 hover:bg-opacity-75' }} text-white hover:bg-sky-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Tournament Archive</a>
                         </div>
                     </div>
                 </div>

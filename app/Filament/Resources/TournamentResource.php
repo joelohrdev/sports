@@ -36,7 +36,12 @@ class TournamentResource extends Resource
                                 Forms\Components\TextInput::make('zip_code'),
                                 Forms\Components\DatePicker::make('start_date')->format('F d, Y')->weekStartsOnSunday(),
                                 Forms\Components\DatePicker::make('end_date')->format('F d, Y')->weekStartsOnSunday(),
-                                Forms\Components\TextInput::make('outcome'),
+                                Forms\Components\Select::make('outcome')
+                                    ->options([
+                                        'win' => 'Win',
+                                        'lose' => 'Lose',
+                                        'tie' => 'Tie'
+                                    ]),
                                 Forms\Components\MarkdownEditor::make('notes')
                             ])
                             ->columnSpan(['default' => 1]),
