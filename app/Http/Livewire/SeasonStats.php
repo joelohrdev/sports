@@ -26,7 +26,7 @@ class SeasonStats extends Component
         $this->totalTourGames = count($singleArray);
 
         $this->totalGames = Game::count() + $this->totalTourGames;
-        $this->totalGamesPlayed = Game::where('date', '<', Carbon::now())->count();
+        $this->totalGamesPlayed = Game::where('date', '<', Carbon::now())->count() + $this->totalTourGames;
         $this->totalUpcomingGames = Game::where('date', '>=', Carbon::now())->count();
     }
 
