@@ -11,7 +11,9 @@ class PastTournamentList extends Component
     public function render()
     {
         return view('livewire.past-tournament-list', [
-            'tournaments' => Tournament::where('end_date', '<', Carbon::today())->get()
+            'tournaments' => Tournament::where('end_date', '<', Carbon::today())
+                ->orderBy('end_date', 'DESC')
+                ->get()
         ]);
     }
 }

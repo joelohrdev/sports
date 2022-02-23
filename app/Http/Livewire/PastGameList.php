@@ -16,7 +16,7 @@ class PastGameList extends Component
             'games' => Game::where('date', '<', Carbon::today())
                 ->orderBy('date', 'DESC')
                 ->orderBy('time', 'ASC')
-                ->paginate(10)
+                ->paginate(1)
         ]);
     }
 }
