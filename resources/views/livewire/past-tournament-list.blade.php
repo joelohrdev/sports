@@ -1,4 +1,4 @@
-<div class="grid gap-6 lg:grid-flow-col-dense lg:grid-cols-3">
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     @forelse($tournaments as $t)
         <article class="mb-5 bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
             <div class="text-lg font-medium text-gray-900 flex justify-between items-end">
