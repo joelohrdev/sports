@@ -39,7 +39,9 @@
                     </tbody>
                 </table>
             </div>
-            {{ $games->links() }}
+            <div class="mt-5">
+                {{ $games->links() }}
+            </div>
         </div>
     </div>
 </div>
