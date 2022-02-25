@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     @forelse($tournaments as $t)
-        <article class="mb-5 bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
+        <article class="mb-5 {{ $t->outcome == 'win' ? 'bg-gradient-to-b from-yellow-100 via-yellow-50 to-white' : 'bg-white' }} px-4 py-5 shadow sm:rounded-lg sm:px-6">
             <div class="text-lg font-medium text-gray-900 flex justify-between items-end">
                 {{ Str::limit($t->name, 20) }} @if($t->outcome == 'win')🥇@endif
                 <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">{{ $t->team->name }}</span>
