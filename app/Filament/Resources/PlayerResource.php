@@ -25,6 +25,7 @@ class PlayerResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('first_name'),
                 Forms\Components\TextInput::make('last_name'),
+                Forms\Components\FileUpload::make('avatar')->preserveFilenames(),
                 Forms\Components\BelongsToSelect::make('team_id')->relationship('team', 'name')
             ]);
     }
@@ -33,6 +34,7 @@ class PlayerResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('avatar')->rounded(),
                 Tables\Columns\TextColumn::make('first_name'),
                 Tables\Columns\TextColumn::make('last_name'),
                 Tables\Columns\TextColumn::make('team.name'),
