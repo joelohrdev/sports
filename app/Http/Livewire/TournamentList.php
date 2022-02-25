@@ -13,6 +13,7 @@ class TournamentList extends Component
         return view('livewire.tournament-list',[
             'tournaments' => Tournament::where('end_date', '>=', Carbon::today())
                 ->orderby('start_date', 'ASC')
+                ->take(3)
                 ->get()
         ]);
     }
