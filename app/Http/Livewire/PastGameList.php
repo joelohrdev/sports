@@ -10,13 +10,15 @@ use Livewire\WithPagination;
 
 class PastGameList extends Component
 {
+    use WithPagination;
+
     public function render()
     {
         return view('livewire.past-game-list', [
             'games' => Game::where('date', '<', Carbon::today())
                 ->orderBy('date', 'DESC')
                 ->orderBy('time', 'ASC')
-                ->paginate(10)
+                ->paginate(1)
         ]);
     }
 }
