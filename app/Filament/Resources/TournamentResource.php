@@ -49,7 +49,7 @@ class TournamentResource extends Resource
                             ->schema([
                                 Forms\Components\Repeater::make('games')
                                     ->schema([
-                                        Forms\Components\DatePicker::make('date')->format('F d, Y')->weekStartsOnSunday(),
+                                        Forms\Components\DatePicker::make('date')->displayFormat('F d, Y')->weekStartsOnSunday(),
                                         Forms\Components\TimePicker::make('time')->withoutSeconds(),
                                         Forms\Components\TextInput::make('field_number')->label('Field Number'),
                                         Forms\Components\TextInput::make('opponent'),

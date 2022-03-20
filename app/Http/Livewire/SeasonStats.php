@@ -23,7 +23,6 @@ class SeasonStats extends Component
                 $singleArray[] = $value;
             }
         }
-        $this->totalTourGames = count($singleArray);
 
         $this->totalGames = Game::count() + $this->totalTourGames;
         $this->totalGamesPlayed = Game::where('date', '<', Carbon::now())->count() + $this->totalTourGames;
