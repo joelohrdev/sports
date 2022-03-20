@@ -6,7 +6,7 @@
                 @foreach($t->games as $id => $game)
                     <li class="py-4 flex justify-between">
                         <div>
-                            <p class="text-sm font-medium text-gray-900">{{ Carbon\Carbon::parse($game['date'])->format('M d, Y') }} - {{ Carbon\Carbon::parse($game['time'])->format('h:i A ') }}</p>
+                            <p class="text-sm font-medium text-gray-900">{{ Carbon\Carbon::parse($game['date'])->format('M d, Y') }} - {{ Carbon\Carbon::parse($game['time'])->format('g:i A ') }}</p>
                             <p class="text-sm text-gray-500">vs. {{ $game['opponent'] }}</p>
                         </div>
                         <div>
