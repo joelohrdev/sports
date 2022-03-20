@@ -41,15 +41,11 @@
         <div class="md:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
-                <a href="#" class="bg-indigo-700 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+                <a href="/" class="bg-indigo-700 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
 
-                <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="/game-archive" class="text-white hover:bg-sky-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Game Archive</a>
 
-                <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-                <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-
-                <a href="#" class="text-white hover:bg-sky-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Reports</a>
+                <a href="/tournament-archive" class="text-white hover:bg-sky-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Tournament Archive</a>
             </div>
         </div>
     </nav>
