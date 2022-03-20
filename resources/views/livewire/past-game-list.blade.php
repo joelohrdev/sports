@@ -11,7 +11,7 @@
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                    @foreach($games as $game)
+                    @forelse($games as $game)
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="flex items-center">
@@ -35,7 +35,9 @@
                             @endif
                         </td>
                     </tr>
-                    @endforeach
+                    @empty
+                        <li>No Upcoming Games</li>
+                    @endforelse
                     </tbody>
                 </table>
             </div>
